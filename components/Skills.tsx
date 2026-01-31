@@ -25,10 +25,10 @@ const Skills = () => {
     {
       category: "Programming Languages",
       skills: [
-        { name: "Java", icon: <FaJava />, level: 85 },
-        { name: "Python", icon: <FaPython />, level: 80 },
-        { name: "SQL", icon: <FaDatabase />, level: 75 },
-        { name: "JavaScript", icon: <SiJavascript />, level: 70 },
+        { name: "Java", icon: <FaJava />, level: 60 },
+        { name: "Python", icon: <FaPython />, level: 40},
+        { name: "SQL", icon: <FaDatabase />, level: 45 },
+        { name: "JavaScript", icon: <SiJavascript />, level: 20 },
       ]
     },
     {
@@ -36,14 +36,14 @@ const Skills = () => {
       skills: [
         { name: "HTML", icon: <FaHtml5 />, level: 90 },
         { name: "CSS", icon: <FaCss3Alt />, level: 85 },
-        { name: "WordPress", icon: <FaWordpress />, level: 70 },
+        { name: "WordPress", icon: <FaWordpress />, level: 64 },
       ]
     },
     {
       category: "Mobile & Database",
       skills: [
-        { name: "Flutter", icon: <SiFlutter />, level: 75 },
-        { name: "MySQL", icon: <SiMysql />, level: 80 },
+        { name: "Flutter", icon: <SiFlutter />, level: 45 },
+        { name: "MySQL", icon: <SiMysql />, level: 50 },
       ]
     },
     {
@@ -52,7 +52,7 @@ const Skills = () => {
         { name: "Git", icon: <FaGitAlt />, level: 80 },
         { name: "GitHub", icon: <FaGithub />, level: 80 },
         { name: "AWS", icon: <FaAws />, level: 70 },
-        { name: "Figma", icon: <FaFigma />, level: 65 },
+        { name: "Figma", icon: <FaFigma />, level: 60 },
       ]
     }
   ]
