@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload } from 'react-icons/fa'
-import ParticlesBackground from './ParticlesBackground'
+import Hero3D from './Hero3D'
 
 const Hero = () => {
   const containerVariants = {
@@ -26,8 +26,8 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
-      {/* Particles Background */}
-      <ParticlesBackground />
+      {/* 3D Particles Background */}
+      <Hero3D />
       
       {/* Gradient overlay for better readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/20 to-slate-900/80 -z-5"></div>
