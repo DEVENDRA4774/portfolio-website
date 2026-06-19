@@ -28,7 +28,7 @@ const Skills = () => {
       icon: <FaAws className="text-xl" />,
       skills: [
         { name: "AWS", icon: <FaAws />, level: 85 },
-        { name: "Linux", icon: <FaLinux />, level: 70 },
+        { name: "Linux", icon: <FaLinux />, level: 60 },
       ]
     },
     {
@@ -37,14 +37,13 @@ const Skills = () => {
       skills: [
         { name: "Git", icon: <FaGitAlt />, level: 80 },
         { name: "GitHub", icon: <FaGithub />, level: 80 },
-        { name: "Bash/Shell", icon: <FaTerminal />, level: 60 },
+        { name: "Bash/Shell", icon: <FaTerminal />, level: 50 },
       ]
     },
     {
       category: "Programming & Scripting",
       icon: <FaJava className="text-xl" />,
       skills: [
-        { name: "Java", icon: <FaJava />, level: 60 },
         { name: "Python", icon: <FaPython />, level: 40 },
         { name: "SQL", icon: <FaDatabase />, level: 45 },
       ]
