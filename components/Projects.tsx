@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaCloud } from 'react-icons/fa'
+import { FaCloud, FaServer } from 'react-icons/fa'
 
 const Projects = () => {
   const ref = useRef(null)
@@ -21,6 +21,19 @@ const Projects = () => {
       ],
       icon: <FaCloud />,
       gradient: "from-cyan-400 to-blue-500"
+    },
+    {
+      title: "Cloud Uptime Monitor",
+      description: "A scalable, cloud-based uptime monitoring platform that continuously tracks website and server availability, providing instant observability and automated incident alert handling.",
+      technologies: ["AWS", "EC2", "S3", "VPC", "CloudWatch", "CloudFront", "WAF", "IAM", "Discord API"],
+      highlights: [
+        "Monitors website and server status every 60 seconds, enabling continuous real-time availability tracking",
+        "Optimized incident management by implementing automated, color-coded Discord alerts for downtime and service recovery events",
+        "Secured the platform infrastructure using AWS WAF, private VPC subnets, and fine-grained IAM roles",
+        "Built a reliable multi-user solution on AWS, enabling centralized log management and enhanced observability"
+      ],
+      icon: <FaServer />,
+      gradient: "from-teal-500 to-emerald-500"
     }
   ]
 
@@ -39,7 +52,7 @@ const Projects = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-1 max-w-xl mx-auto gap-6">
+        <div className="grid md:grid-cols-2 max-w-4xl mx-auto gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
