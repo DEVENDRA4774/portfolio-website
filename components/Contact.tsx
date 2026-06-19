@@ -81,34 +81,46 @@ const Contact = () => {
             className="space-y-5"
           >
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-            {contactInfo.map((info, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="flex items-center gap-4 glass-neu-card p-4 rounded-xl"
-              >
-                <div className="text-2xl text-cyan-400 glass-neu-icon p-3 rounded-xl">
-                  {info.icon}
-                </div>
-                <div>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider">{info.title}</p>
-                  {info.link ? (
-                    <a
-                      href={info.link}
-                      target={info.link.startsWith('http') ? '_blank' : undefined}
-                      rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium text-sm"
-                    >
+            {contactInfo.map((info, index) => {
+              const CardContent = (
+                <div className="flex items-center gap-4 w-full">
+                  <div className="text-2xl text-cyan-400 glass-neu-icon p-3 rounded-xl transition-colors duration-200 group-hover:text-cyan-300">
+                    {info.icon}
+                  </div>
+                  <div>
+                    <p className="text-gray-500 text-xs uppercase tracking-wider">{info.title}</p>
+                    <p className="text-white font-medium text-sm transition-colors duration-200 group-hover:text-cyan-400">
                       {info.value}
-                    </a>
-                  ) : (
-                    <p className="text-white font-medium text-sm">{info.value}</p>
-                  )}
+                    </p>
+                  </div>
                 </div>
-              </motion.div>
-            ))}
+              )
+
+              return info.link ? (
+                <motion.a
+                  key={index}
+                  href={info.link}
+                  target={info.link.startsWith('http') ? '_blank' : undefined}
+                  rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  className="flex items-center glass-neu-card p-4 rounded-xl hover:bg-white/[0.03] transition-all duration-300 cursor-pointer group border border-transparent hover:border-cyan-500/20"
+                >
+                  {CardContent}
+                </motion.a>
+              ) : (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  className="flex items-center glass-neu-card p-4 rounded-xl"
+                >
+                  {CardContent}
+                </motion.div>
+              )
+            })}
 
             {/* Social Links */}
             <div className="pt-4">
@@ -123,7 +135,7 @@ const Contact = () => {
                   <FaLinkedin size={24} />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/DEVENDRA4774"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-neu-icon p-4 rounded-xl text-gray-400 hover:text-cyan-400"

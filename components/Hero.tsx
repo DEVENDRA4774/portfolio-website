@@ -148,7 +148,7 @@ const Hero = () => {
             <FaLinkedin size={24} />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/DEVENDRA4774"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-neu-icon p-3 rounded-xl text-gray-400 hover:text-cyan-400"
