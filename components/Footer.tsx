@@ -17,12 +17,15 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <p className="text-gray-500 flex items-center justify-center gap-2 text-sm">
-            Made with <FaHeart className="text-cyan-500/70" /> by{' '}
-            <span className="gradient-text font-semibold">Devendra Dhande</span>
+          <h3 className="text-xl md:text-2xl font-bold mb-3 text-white">
+            Thank You for <span className="gradient-text">Visiting!</span>
+          </h3>
+          <p className="text-gray-400 text-sm max-w-md mx-auto mb-6 leading-relaxed">
+            I'm always excited to connect with teams and builders. Let's collaborate to design, automate, and secure scalable cloud infrastructure!
           </p>
-          <p className="text-gray-600 text-xs mt-2">
-            © {currentYear} All rights reserved.
+          <div className="w-12 h-[1px] bg-cyan-500/20 mx-auto mb-4"></div>
+          <p className="text-gray-600 text-xs">
+            © {currentYear} Devendra Dhande. All rights reserved.
           </p>
         </motion.div>
       </div>
