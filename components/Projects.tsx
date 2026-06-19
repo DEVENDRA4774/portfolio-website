@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaCloud, FaDatabase, FaCode } from 'react-icons/fa'
+import { FaCloud } from 'react-icons/fa'
 
 const Projects = () => {
   const ref = useRef(null)
@@ -11,33 +11,9 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Mess Management System",
-      description: "Designed and developed a web-based system for managing mess operations, resolving database latency issues and optimizing response time by 15% to deliver a fast and secure administrative experience.",
-      technologies: ["Java", "MySQL", "JavaScript", "HTML", "CSS"],
-      highlights: [
-        "Optimized complex database queries, reducing average response time by 15% and saving user session time",
-        "Resolved critical security issues by implementing secure user verification protocols",
-        "Streamlined operational workflows, reducing overall data entry and administrative processing time"
-      ],
-      icon: <FaCode />,
-      gradient: "from-cyan-500 to-teal-500"
-    },
-    {
-      title: "Secure Banking System",
-      description: "Built a robust desktop banking application emphasizing strict security principles, role-based access control, and transaction safety — resolving synchronization issues and saving transaction processing time.",
-      technologies: ["Java", "MySQL", "Swing", "JDBC"],
-      highlights: [
-        "Implemented secure, role-based authentication mirroring cloud IAM practices to prevent unauthorized access",
-        "Optimized query structures and database indexing, saving transaction response time by 10%",
-        "Resolved transaction concurrency issues while keeping all critical account operations safe and audited"
-      ],
-      icon: <FaDatabase />,
-      gradient: "from-teal-500 to-emerald-500"
-    },
-    {
       title: "CloudCanvas-Lite",
       description: "Cloud-themed interactive drawing canvas application hosted on AWS. Configured for fast asset loading, saving visitor download time, and secured using standard cloud security patterns.",
-      technologies: ["HTML", "CSS", "JavaScript", "AWS S3"],
+      technologies: ["AWS", "EC2", "VPC", "CloudWatch", "S3", "IAM"],
       highlights: [
         "Configured Amazon CloudFront CDN, optimizing image/asset delivery and improving load times by 15%",
         "Secured bucket configurations using AWS S3 Bucket Policies to prevent public read/write vulnerability issues",
@@ -63,7 +39,7 @@ const Projects = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-1 max-w-xl mx-auto gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
