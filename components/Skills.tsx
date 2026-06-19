@@ -3,15 +3,15 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { 
-  FaJava, 
-  FaPython, 
-  FaDatabase, 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaWordpress, 
-  FaGitAlt, 
-  FaGithub, 
+import {
+  FaJava,
+  FaPython,
+  FaDatabase,
+  FaHtml5,
+  FaCss3Alt,
+  FaWordpress,
+  FaGitAlt,
+  FaGithub,
   FaAws,
   FaLinux,
   FaTerminal
@@ -44,8 +44,8 @@ const Skills = () => {
       category: "Programming & Scripting",
       icon: <FaJava className="text-xl" />,
       skills: [
-        { name: "Python", icon: <FaPython />, level: 40 },
-        { name: "SQL", icon: <FaDatabase />, level: 45 },
+        { name: "Python", icon: <FaPython />, level: 55 },
+        { name: "SQL", icon: <FaDatabase />, level: 50 },
       ]
     },
     {
@@ -130,7 +130,7 @@ const Skills = () => {
           className="mt-8 glass-neu-card p-8 rounded-2xl relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber-500/40 to-transparent"></div>
-          
+
           <div className="flex items-center gap-3 mb-6">
             <div className="neu-raised p-3 rounded-xl">
               <FaAws className="text-3xl text-amber-400" />
