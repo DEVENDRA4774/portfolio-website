@@ -69,7 +69,7 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
       <Hero3D />
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1e]/90 via-cyan-950/10 to-[#0a0f1e]/90 -z-5"></div>
-      
+
       <motion.div
         variants={containerVariants}
         initial="hidden"

@@ -122,28 +122,7 @@ const Contact = () => {
               )
             })}
 
-            {/* Social Links */}
-            <div className="pt-4">
-              <h4 className="text-lg font-semibold text-white mb-4">Connect With Me</h4>
-              <div className="flex gap-4">
-                <a
-                  href="https://www.linkedin.com/in/devendra-dhande-6826681b8/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glass-neu-icon p-4 rounded-xl text-gray-400 hover:text-cyan-400"
-                >
-                  <FaLinkedin size={24} />
-                </a>
-                <a
-                  href="https://github.com/DEVENDRA4774"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glass-neu-icon p-4 rounded-xl text-gray-400 hover:text-cyan-400"
-                >
-                  <FaGithub size={24} />
-                </a>
-              </div>
-            </div>
+
           </motion.div>
 
           {/* Contact Form */}
