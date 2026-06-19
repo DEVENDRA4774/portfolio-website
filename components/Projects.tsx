@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaCloud, FaServer } from 'react-icons/fa'
+import { FaCloud, FaServer, FaShieldAlt } from 'react-icons/fa'
 
 const Projects = () => {
   const ref = useRef(null)
@@ -34,6 +34,19 @@ const Projects = () => {
       ],
       icon: <FaServer />,
       gradient: "from-teal-500 to-emerald-500"
+    },
+    {
+      title: "AWS Secure Cloud Infrastructure & Static Website Hosting",
+      description: "Designed and configured a secure AWS cloud infrastructure environment for hosting static web applications, incorporating industry-standard best practices for network isolation, identity management, and edge security.",
+      technologies: ["AWS", "EC2", "S3", "CloudFront", "IAM", "WAF", "VPC", "OpenVPN"],
+      highlights: [
+        "Designed and configured a secure AWS network using VPC, public & private subnets, route tables, and security groups",
+        "Deployed and managed EC2 instances with secure remote access through OpenVPN gateways and AWS Systems Manager (SSM)",
+        "Hosted static websites on Amazon S3 and optimized global content delivery using Amazon CloudFront CDN",
+        "Applied least-privilege IAM policies to secure resources, and configured AWS WAF to defend against SQLi, XSS, and bad bots"
+      ],
+      icon: <FaShieldAlt />,
+      gradient: "from-blue-500 to-indigo-500"
     }
   ]
 
@@ -52,7 +65,7 @@ const Projects = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 max-w-4xl mx-auto gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
